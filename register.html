@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IA Blog - Registrarse</title>
+  <link rel="stylesheet" href="Css/register.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">IA BLOG</div>
+    <ul class="nav-links">
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Explora</a></li>
+      <li><a href="#">Publicar</a></li>
+      <li><a href="login.html" class="login-btn">Iniciar Sesión</a></li>
+    </ul>
+    <div class="menu-toggle" id="menu-toggle">
+      ☰
+    </div>
+  </nav>
+
+  <!-- REGISTER -->
+  <main>
+    <div class="register-container">
+      <h2>Crear Cuenta</h2>
+      <form class="register-form">
+        <div class="input-field">
+          <input type="text" id="username" name="username" placeholder="Nombre de usuario" required />
+        </div>
+        <div class="input-field">
+          <input type="email" id="email" name="email" placeholder="Correo electrónico" required />
+        </div>
+        <div class="input-field">
+          <input type="password" id="password" name="password" placeholder="Contraseña" required />
+        </div>
+        <div class="input-field">
+          <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirmar contraseña" required />
+        </div>
+        <button type="submit" class="btn-register">Registrarse</button>
+        <p class="login-link">
+          ¿Ya tienes una cuenta? <a href="login.html">Inicia sesión</a>
+        </p>
+      </form>
+    </div>
+  </main>
+
+  <script src="Js/register.js"></script>
+</body>
+</html>
