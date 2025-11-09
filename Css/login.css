@@ -1,0 +1,219 @@
+/* GENERAL */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #dbeafe, #f0f7ff);
+  margin: 0;
+  color: #111;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* NAVBAR */
+nav {
+  background: #fff;
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  position: relative;
+}
+
+nav .logo {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  transition: color 0.2s, background 0.2s;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+nav ul li a:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+nav ul li a.login-btn {
+  background: #000;
+  color: #fff;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+nav ul li a.login-btn:hover {
+  background: #222;
+  transform: scale(1.03);
+}
+
+/* BOTÓN HAMBURGUESA */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* LOGIN */
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.login-container {
+  background: #fff;
+  padding: 50px 45px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 340px;
+  text-align: center;
+  animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-container h2 {
+  margin-bottom: 28px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #111;
+}
+
+/* CAMPOS */
+.input-field {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.input-field input {
+  width: 100%;
+  padding: 16px 14px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  color: #333;
+  font-size: 15px;
+  box-sizing: border-box;
+  transition: border 0.3s, background-color 0.3s;
+}
+
+.input-field input:focus {
+  border-color: #000;
+  background-color: #fff;
+  outline: none;
+}
+
+/* BOTÓN */
+.btn-login {
+  width: 100%;
+  padding: 16px;
+  background: #000;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-login:hover {
+  background: #222;
+  transform: scale(1.02);
+}
+
+/* REGISTRO */
+.register-link {
+  margin-top: 25px;
+  font-size: 14px;
+  color: #444;
+}
+
+.register-link a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  nav {
+    padding: 15px 25px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 65px;
+    right: 0;
+    background: #fff;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .login-container {
+    width: 100%;
+    max-width: 360px;
+    padding: 40px 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    padding: 35px 25px;
+  }
+
+  .login-container h2 {
+    font-size: 22px;
+  }
+
+  .btn-login {
+    font-size: 16px;
+  }
+}
