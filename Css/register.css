@@ -1,15 +1,17 @@
-/* GENERAL */
 body {
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #dbeafe, #f0f7ff);
+
+  background:
+    url("../Img/Bot.png") left bottom / 350px no-repeat;
+
   margin: 0;
   color: #111;
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
 }
 
-/* NAVBAR */
 nav {
   background: #fff;
   color: #000;
@@ -24,16 +26,20 @@ nav {
 nav .logo {
   font-size: 28px;
   font-weight: 700;
-  letter-spacing: 1px;
   color: #000;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  transition: all .3s ease;
 }
 
 nav ul {
   list-style: none;
   display: flex;
   gap: 15px;
-  margin: 0;
-  padding: 0;
   align-items: center;
 }
 
@@ -41,9 +47,9 @@ nav ul li a {
   text-decoration: none;
   color: #000;
   font-weight: 500;
-  transition: color 0.2s, background 0.2s;
   padding: 8px 12px;
   border-radius: 6px;
+  transition: color .2s, background .2s;
 }
 
 nav ul li a:hover {
@@ -54,7 +60,6 @@ nav ul li a.login-btn {
   background: #000;
   color: #fff;
   font-weight: 600;
-  transition: all 0.2s ease;
 }
 
 nav ul li a.login-btn:hover {
@@ -62,14 +67,12 @@ nav ul li a.login-btn:hover {
   transform: scale(1.03);
 }
 
-/* BOTÓN HAMBURGUESA */
 .menu-toggle {
   display: none;
   font-size: 28px;
   cursor: pointer;
 }
 
-/* REGISTER */
 main {
   flex: 1;
   display: flex;
@@ -80,36 +83,25 @@ main {
 
 .register-container {
   background: #fff;
-  padding: 50px 45px;
+  padding: 32px 35px; 
   border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  width: 340px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  width: 340px;         
   text-align: center;
   animation: fadeIn 0.8s ease;
+  margin-top: 10px;   
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-.register-container h2 {
-  margin-bottom: 28px;
-  font-size: 24px;
-  font-weight: 600;
-  color: #111;
-}
-
-/* CAMPOS */
 .input-field {
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
+  display: flex;
+  justify-content: center;
 }
 
 .input-field input {
@@ -117,20 +109,16 @@ main {
   padding: 16px 14px;
   border: 1px solid #ccc;
   border-radius: 10px;
-  background-color: #f9f9f9;
+  background: #f9f9f9;
   color: #333;
   font-size: 15px;
-  box-sizing: border-box;
-  transition: border 0.3s, background-color 0.3s;
 }
 
 .input-field input:focus {
   border-color: #000;
-  background-color: #fff;
-  outline: none;
+  background: #fff;
 }
 
-/* BOTÓN */
 .btn-register {
   width: 100%;
   padding: 16px;
@@ -140,8 +128,6 @@ main {
   color: #fff;
   font-size: 17px;
   font-weight: 600;
-  cursor: pointer;
-  transition: all 0.25s ease;
 }
 
 .btn-register:hover {
@@ -149,16 +135,13 @@ main {
   transform: scale(1.02);
 }
 
-/* ENLACE LOGIN */
 .login-link {
   margin-top: 25px;
-  font-size: 14px;
   color: #444;
 }
 
 .login-link a {
   color: #000;
-  text-decoration: none;
   font-weight: 500;
 }
 
@@ -166,8 +149,13 @@ main {
   text-decoration: underline;
 }
 
-/* RESPONSIVE */
 @media (max-width: 768px) {
+
+  body {
+    background:
+      url("../Img/Bot.png") left bottom / 230px no-repeat;
+  }
+
   nav {
     padding: 15px 25px;
   }
@@ -178,13 +166,15 @@ main {
 
   .nav-links {
     display: none;
+    flex-direction: column;
     position: absolute;
     top: 65px;
     right: 0;
     background: #fff;
-    flex-direction: column;
     width: 100%;
-    padding: 10px 0;
+    padding: 20px 0;
+    text-align: center;
+    gap: 20px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   }
 
@@ -192,21 +182,26 @@ main {
     display: flex;
   }
 
-  .nav-links li {
-    text-align: center;
-    padding: 10px 0;
+  .nav-links li a {
+    width: 100%;
+    padding: 12px 0;
   }
 
   .register-container {
-    width: 100%;
-    max-width: 360px;
-    padding: 40px 30px;
+    margin-bottom: 40px;
   }
 }
 
 @media (max-width: 480px) {
+
+  body {
+    background:
+      url("../Img/Bot.png") center bottom / min(55vw, 260px) no-repeat;
+  }
+
   .register-container {
     padding: 35px 25px;
+    margin-bottom: min(35vh, 210px);
   }
 
   .register-container h2 {
