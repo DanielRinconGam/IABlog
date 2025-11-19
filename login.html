@@ -8,13 +8,12 @@
 </head>
 <body>
 
-  <!-- NAVBAR -->
   <nav>
     <div class="logo">IA BLOG</div>
 
     <ul class="nav-links">
       <li><a href="home.html">Inicio</a></li>
-      <li><a href="#">Publicar</a></li>
+      <li><a href="publicar.html">Publicar</a></li>
       <li><a href="myposts.html">Mis Publicaciones</a></li>
       <li><a href="register.html" class="login-btn">Registrarse</a></li>
     </ul>
@@ -24,7 +23,6 @@
     </div>
   </nav>
 
-  <!-- LOGIN -->
   <main>
     <div class="login-container">
       <h2>Iniciar Sesión</h2>
@@ -37,6 +35,8 @@
         <div class="input-field">
           <input type="password" placeholder="Contraseña" required />
         </div>
+
+        <div id="error-msg" class="error"></div>
 
         <button type="submit" class="btn-login">Ingresar</button>
       </form>

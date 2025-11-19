@@ -91,6 +91,15 @@ main {
   animation: fadeIn 0.8s ease;
 }
 
+#error-msg {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }

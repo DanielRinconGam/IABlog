@@ -1,9 +1,6 @@
 body {
   font-family: 'Poppins', sans-serif;
-
-  background:
-    url("../Img/Bot.png") left bottom / 350px no-repeat;
-
+  background: url("../Img/Bot.png") left bottom / 350px no-repeat;
   margin: 0;
   color: #111;
   min-height: 100vh;
@@ -14,13 +11,14 @@ body {
 
 nav {
   background: #fff;
-  color: #000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding: 15px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 40px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 nav .logo {
@@ -41,6 +39,8 @@ nav ul {
   display: flex;
   gap: 15px;
   align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li a {
@@ -49,7 +49,7 @@ nav ul li a {
   font-weight: 500;
   padding: 8px 12px;
   border-radius: 6px;
-  transition: color .2s, background .2s;
+  transition: .2s;
 }
 
 nav ul li a:hover {
@@ -63,8 +63,8 @@ nav ul li a.login-btn {
 }
 
 nav ul li a.login-btn:hover {
-  background: #222;
   transform: scale(1.03);
+  background: #222;
 }
 
 .menu-toggle {
@@ -83,13 +83,13 @@ main {
 
 .register-container {
   background: #fff;
-  padding: 32px 35px; 
+  padding: 32px 35px;
   border-radius: 16px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-  width: 340px;         
+  width: 340px;
   text-align: center;
   animation: fadeIn 0.8s ease;
-  margin-top: 10px;   
+  margin-top: 10px;
 }
 
 @keyframes fadeIn {
@@ -149,11 +149,18 @@ main {
   text-decoration: underline;
 }
 
+#error-register {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
 @media (max-width: 768px) {
 
   body {
-    background:
-      url("../Img/Bot.png") left bottom / 230px no-repeat;
+    background: url("../Img/Bot.png") left bottom / 230px no-repeat;
   }
 
   nav {
@@ -195,8 +202,7 @@ main {
 @media (max-width: 480px) {
 
   body {
-    background:
-      url("../Img/Bot.png") center bottom / min(55vw, 260px) no-repeat;
+    background: url("../Img/Bot.png") center bottom / min(55vw, 260px) no-repeat;
   }
 
   .register-container {
