@@ -30,6 +30,8 @@ nav ul {
   list-style: none;
   display: flex;
   gap: 15px;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li a {
@@ -93,7 +95,7 @@ nav ul li a:hover {
   grid-template-columns: 1fr 330px;
   gap: 30px;
   margin: 40px 0;
-  align-items: center;   
+  align-items: center;
 }
 
 .blog-row.reverse {
@@ -135,8 +137,7 @@ nav ul li a:hover {
   }
 }
 
-@media(max-width: 600px){
-
+@media(max-width: 650px){
   .menu-toggle {
     display: block;
   }
@@ -144,13 +145,14 @@ nav ul li a:hover {
   .nav-links {
     display: none;
     flex-direction: column;
+    align-items: center;
     position: absolute;
     right: 0;
     top: 65px;
     background: #fff;
     width: 100%;
     padding: 20px 0;
-    gap: 15px;
+    gap: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   }
 
@@ -158,8 +160,26 @@ nav ul li a:hover {
     display: flex;
   }
 
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul li {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+  }
+
   nav ul li a {
     width: 100%;
     text-align: center;
+    padding: 12px 0;
+    margin: 0;
+    box-sizing: border-box;
   }
 }

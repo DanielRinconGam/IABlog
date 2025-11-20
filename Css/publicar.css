@@ -33,6 +33,8 @@ nav ul {
   list-style: none;
   display: flex;
   gap: 15px;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li a {
@@ -64,7 +66,7 @@ nav ul li a:hover {
   bottom: 0;
   width: 350px;
   height: 350px;
-  background: url("../Img/Bot.png") center / contain no-repeat;
+  background: url("../Img/Bot.png") center/contain no-repeat;
   z-index: -1;
   pointer-events: none;
 }
@@ -108,8 +110,7 @@ nav ul li a:hover {
 }
 
 .preview-img {
-  min-width: 140px;
-  max-width: 140px;
+  width: 140px;
   height: 140px;
   object-fit: cover;
 }
@@ -122,7 +123,7 @@ nav ul li a:hover {
 
 .preview-info h3 {
   font-size: 15px;
-  margin: 0 0 6px 0;
+  margin: 0 0 6px;
   font-weight: 600;
   line-height: 1.35;
 }
@@ -144,12 +145,12 @@ nav ul li a:hover {
 }
 
 .chat-input-box {
-  width: 100% !important;
-  max-width: 100%;
+  width: 100%;
+  max-width: 850px;
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 0px;
+  padding: 0;
   background: #fff;
   box-sizing: border-box;
 }
@@ -173,56 +174,101 @@ textarea {
   font-weight: 600;
   cursor: pointer;
   transition: .2s;
+  border-radius: 10px;
 }
 
 .send-btn:hover {
   background: #222;
 }
 
-.send-btn:disabled,
-.send-btn[disabled] {
+.send-btn:disabled {
   background: #b5b5b5 !important;
   color: #fff !important;
   cursor: not-allowed !important;
-  opacity: 0.6 !important;
-  pointer-events: none !important;
-  box-shadow: none !important;
+  opacity: .6;
+  pointer-events: none;
+  border-radius: 10px;
 }
 
 .chat-msg.bot {
-  width: 100% !important;
-  max-width: 100% !important;
-  margin-left: auto;
-  margin-right: auto;
-  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
 }
 
-@media (max-width: 780px) {
-  .content-box {
-    max-width: 95%;
-  }
-
+@media (max-width: 900px) {
   .preview-card {
     grid-template-columns: 100px 1fr;
   }
 
   .preview-img {
-    min-width: 100px;
-    max-width: 100px;
+    width: 100px;
     height: 100px;
   }
+}
 
-  textarea {
-    height: 55px;
+@media (max-width: 650px) {
+  .menu-toggle {
+    display: block;
   }
 
-  .send-btn {
-    width: 95px;
-    height: 55px;
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    top: 65px;
+    background: #fff;
+    width: 100%;
+    padding: 20px 0;
+    gap: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul li {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+  }
+
+  nav ul li a {
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+    margin: 0;
+    box-sizing: border-box;
   }
 
   .bg-bot {
     width: 240px;
     height: 240px;
+  }
+
+  .chat-input-box {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  textarea {
+    width: 100%;
+    height: 50px;
+  }
+
+  .send-btn {
+    width: 100%;
+    height: 50px;
   }
 }
